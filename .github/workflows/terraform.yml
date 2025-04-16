@@ -45,7 +45,7 @@ jobs:
         run: terraform plan -input=false
 
   terraform-apply:
-    name: Terraform Apply
+    name: Terraform Apply 
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main' && github.event_name == 'push'
 
