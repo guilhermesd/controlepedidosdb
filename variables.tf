@@ -27,5 +27,5 @@ variable "db_allocated_storage" {
 variable "vpc_id" {
   description = "ID da VPC onde o cluster será criado"
   type        = string
-  default = "vpc-0314c9173d440ba2e"
+  default     = "vpc-0df6a7cfe31797366"
 }
