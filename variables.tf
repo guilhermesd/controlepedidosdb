@@ -9,6 +9,7 @@ variable "db_user" {
 variable "db_password" {
   description = "SuaSenhaAqui"
   sensitive   = true
+  default = "Teste#Teste"
 }
 
 variable "db_port" {
