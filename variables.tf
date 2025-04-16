@@ -21,5 +21,11 @@ variable "db_instance_class" {
 }
 
 variable "db_allocated_storage" {
-  default = 20
+  default = 5
+}
+
+variable "vpc_id" {
+  description = "ID da VPC onde o cluster será criado"
+  type        = string
+  default = "vpc-0314c9173d440ba2e"
 }
