@@ -1,7 +1,16 @@
+provider "aws" {
+  region = "us-east-1"
+}
+
+# Busca a VPC default da região us-east-1
+data "aws_vpc" "default" {
+  default = true
+}
+
 resource "aws_security_group" "rds_sg" {
   name        = "rds-mysql-sg"
   description = "Security group for MySQL RDS instance"
-  vpc_id      = var.vpc_id
+  vpc_id      = data.aws_vpc.default.id
 
   ingress {
     from_port   = var.db_port
