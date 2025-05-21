@@ -27,10 +27,6 @@ resource "aws_security_group" "rds_sg" {
   }
 }
 
-provider "aws" {
-  region = "us-east-1"
-}
-
 resource "aws_db_instance" "mysql" {
   identifier         = "mysql-pedidos"
   allocated_storage  = var.db_allocated_storage
